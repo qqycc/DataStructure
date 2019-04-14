@@ -1,7 +1,7 @@
 package com.qqy.list;
 
 /**
- * 链表的增删
+ * 链表
  * Author:qqy
  */
 public class MyLinkedList {
@@ -70,6 +70,39 @@ public class MyLinkedList {
             }
             cur.next = null;
         }
+    }
+
+    //中间插入
+    public boolean addIndex(int index, int v) {
+        Node node=new Node(v);
+        if(index==0){
+            node.next=this.head.next;
+           this.head=node;
+        }else {
+            Node cur=this.head;
+            for (int i = 0; cur.next!=null&& i < index - 1; i++) {
+                cur = cur.next;
+            }
+            if(cur.next==null){
+                return false;
+            }
+            node.next=cur.next;
+            cur.next=node;
+        }
+        return true;
+    }
+
+    //是否包含指定元素
+    public boolean contains(int v) {
+        Node node=new Node(v);
+        Node cur=this.head;
+        while(cur!=null){
+            if(cur==node){
+                return true;
+            }
+            cur=cur.next;
+        }
+        return false;
     }
 
     //通过循环遍历链表的每一个结点
