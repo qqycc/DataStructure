@@ -4,7 +4,7 @@ package com.qqy.list;
  * 判断是否为回文结构
  *
  * 思路：
- *      找到中间结点，中间后的（包括中间）头插至新的链表，与原链表比较，相等返回true
+ *      找到中间节点，中间后的（包括中间）头插至新的链表，与原链表比较，相等返回true
  * Author:qqy
  */
 public class PalindromeList {
@@ -85,7 +85,7 @@ public class PalindromeList {
             fast=fast.next;
         }
 
-        //slow为中间结点，将之后的头插入新链表
+        //slow为中间节点，将之后的头插入新链表
         while(slow!=null){
             ListNode next=slow.next;
             slow.next=result;

@@ -6,12 +6,12 @@ package com.qqy.list;
  */
 public class MyLinkedList {
     /**
-     * 定义一个内部类，表示结点
+     * 定义一个内部类，表示节点
      */
     public class Node {
         //保存有效数据
         private int value;
-        //下一个结点的线索（引用）
+        //下一个节点的线索（引用）
         private Node next;
 
         public Node(int v) {
@@ -20,7 +20,7 @@ public class MyLinkedList {
         }
     }
 
-    //保存链表中第一个结点的引用，若无结点 -> head=null
+    //保存链表中第一个节点的引用，若无节点 -> head=null
     private Node head;
 
     MyLinkedList(){
@@ -35,16 +35,16 @@ public class MyLinkedList {
 
     public void pushBack(int item){
         Node node=new Node(item);
-        //链表没有结点
+        //链表没有节点
         if(this.head==null){
             this.head=node;
         }else {
             Node cur = this.head;
-            //得到最后一个结点
+            //得到最后一个节点
             while (cur.next != null) {
                 cur = cur.next;
             }
-            //将node赋给最后一个结点的next
+            //将node赋给最后一个节点的next
             cur.next = node;
         }
     }
@@ -105,7 +105,7 @@ public class MyLinkedList {
         return false;
     }
 
-    //通过循环遍历链表的每一个结点
+    //通过循环遍历链表的每一个节点
     public void display(){
         Node cur=this.head;
         while(cur!=null){

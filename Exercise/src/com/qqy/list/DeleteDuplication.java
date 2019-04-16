@@ -1,7 +1,7 @@
 package com.qqy.list;
 
 /**
- * 在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，重复的结点不保留，返回链表头指针
+ * 在一个排序的链表中，存在重复的节点，请删除该链表中重复的节点，重复的节点不保留，返回链表头指针
  *
  * 思路：
  *      因为是有序链表，重复的值一定是挨着的
@@ -25,11 +25,11 @@ public class DeleteDuplication {
             return head;
         }
 
-        // 设置一个假结点，消除第一个结点没有前驱的特殊性
+        // 设置一个假节点，消除第一个节点没有前驱的特殊性
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode prev = dummy;  // prev 永远是 p1 的前驱结点，用来删除结点
-        // p1 和 p2 是进行比较的两个结点
+        ListNode prev = dummy;  // prev 永远是 p1 的前驱节点，用来删除节点
+        // p1 和 p2 是进行比较的两个节点
         ListNode p1 = head;
         ListNode p2 = head.next;
 
