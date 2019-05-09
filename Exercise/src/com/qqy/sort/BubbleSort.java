@@ -23,7 +23,7 @@ public class BubbleSort {
                 }
             }
             //有序，退出循环
-            if (flag == true) {
+            if (flag) {
                 break;
             }
         }
