@@ -64,4 +64,7 @@ public class HeapSort {
             System.out.print(arr[i]+" ");
         }
     }
+
+    //建立最大堆，将根结点与最后一个叶子节点交换，堆化，继续交换
+
 }
